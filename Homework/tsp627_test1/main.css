@@ -1,0 +1,217 @@
+
+
+
+body {
+  margin: 2px;
+  padding: 2px;
+  height: 1000px;
+  width: 800px;
+  color: #1a501a;
+  background-color:white;
+  font-family: Calibri, Arial, sans-serif;
+  font-size: small;
+  line-height: 200%;
+  background-image: url(images/beach-84533.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+    
+}
+#nav-bar{
+    top: 15%;
+    padding: 6px;
+    width: 80%;
+    background-color: white;
+    border: 1px solid blue;
+}
+.nav{
+    margin-left: 2%;
+    padding: 1px;
+    width: 90%;
+    position: absolute
+    
+}
+.mini-nav-menu{
+    background-color: white;
+    margin-bottom: 2px;
+    margin-left: 1px;
+    padding-right: 1px;
+    padding-left: 1px;
+    text-align: center;
+    white-space: nowrap;
+    
+    
+}
+.mini-nav-menu li{
+        display: inline-block;
+        vertical-align: top;
+        text-transform: capitalize;
+        color: black;
+        
+    }
+.mini-nav-menu a{
+    display: inline-block;
+    margin: 5px 2px 5px 0px;
+    padding: 0 4px;
+    
+
+}
+.mini-nav-menu a:hover{
+    text-decoration: underline;
+    background-color: #eae1f3;
+}
+
+.container{
+    height: 980px;
+    width: 100%;
+    margin: 10px auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 130%;
+    text-align: center;   
+}
+#upper-corner{
+    position: absolute;
+    left: 80%;
+}
+#top{
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    padding: .6em;
+    margin-left: auto;
+    background-color: white;
+    border-bottom: 1px solid grey;
+    
+}
+#top h1{
+    padding: 1px 0px 0px 0px;
+    margin: 1px 0px 1px 0px;
+}
+#carousel{
+    height: 240px;
+    width: 350px;
+    left: 25%;
+    top: 6%;
+}
+#carousel-img1{
+    height: 180px;
+    width: 100%;
+    border-radius: 8%;
+}
+#carousel-img2{
+    height: 180px;
+    width: 100%;
+    border-radius: 8%;
+}
+#carousel-img3{
+    height: 180px;
+    width: 100%;
+    border-radius: 8%;
+}
+#contact-form{
+    position: absolute;
+    top: 30%;
+    left: 11.5%;
+    width: 75%;
+}
+.form-label{
+    background-color: #d4e4fc;
+    width: 100%;
+    
+}
+
+#leftnav {
+  position: absolute;
+  top: 60%;
+  left: 7%;
+  width: 25%;
+  min-height: 530px;
+  max-height: 100%;
+  float: left;
+  margin: 2px;  
+  padding-top: 2px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  text-align: left;
+  background-color: white;
+  border-radius: 1%;
+
+  
+  
+}
+
+
+.content {
+  position: absolute;
+  top: 60%;;
+  left: 28.5%;
+  width: 25%;
+  max-width: 36em;
+  max-height: 100%;
+  min-height: 530px;
+  margin-left: 70px;
+  margin-right: 70px;
+  padding: 1em;
+  text-align: left;
+  overflow: auto;
+  background-color: white;
+  border-radius: 1%;
+
+  
+
+}
+#bottom{
+    height: 100%;
+    border: 1px solid grey;
+}
+.section-left{
+    overflow: hidden;
+    float: left;
+    border: 1px solid grey;
+    width: 18px;
+    height: 20px;
+}
+.section-right{
+    width: 20px;
+    height: 20px;
+    border: 1px solid grey;
+    margin-left: 1px;
+    float: right;
+}
+
+#rightnav {
+  position: absolute;
+  top: 60%;
+  left: 65%;
+  width: 25%;
+  min-height: 530px;
+  max-height: 100%;
+  float: right;
+  margin: 2px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  text-align: left;
+  background-color: white;
+  border-radius: 1%;
+
+}
+.images{
+    width: 95%;
+    height: 150px;
+    border-radius: 8%;
+}
+
+
+.footer {
+  position: absolute;
+  top: 965px;
+  clear: both;
+  min-width: 300px;
+  max-width: 320px;
+  margin: 2px;
+  padding: 2px;
+  border-top: 1px double;
+  border-bottom: 1px solid;
+}

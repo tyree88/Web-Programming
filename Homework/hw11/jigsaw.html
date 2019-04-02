@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8 name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jigsaw Puzzle</title>
+<link src="jigsaw.css" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jq
+uery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<link type="text/css" rel="stylesheet" href="jigsaw.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="jigsaw.js" type="text/javascript"></script>
+</head>
+<body style="text-align: center">
+    <h1 style="text-align: center"> Jigsaw Puzzle </h1>
+    <div class="puzzle-container">
+        <div id="grid0" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="grid1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="grid2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="grid3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="grid4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="grid5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="grid6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="grid7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="grid8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="grid9" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="grid10" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="grid11" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+
+    <!-- The start of the droppable grid -->
+     <div class="time">
+    <p>Time Taken</p> 
+    <br>
+    <input type="text" id="time" value="00:00:00" readonly>
+    	<input type="button" id="done" value="Done" onclick="stopTime();">
+    </div>
+    </div>
+    <br>
+    
+    <!-- the start of the images -->
+    <div class="imagebox"  ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div id="img0">
+    <img style = "position: absolute; top: 0px; left: 0px;
+               background-color: lightgrey;" src = "" id="00" alt="pt1" draggable="true" ondragstart="drag(event)">
+    </div>
+    <div id="img1">    
+	<img style = "position: relative; top: 0px; left: 0px;
+               background-color: lightgrey;" src = "" id="01" alt="pt2" draggable="true" ondragstart="drag(event)">
+    </div>
+        
+    <div id="img2">   
+	<img style = "position: absolute; top: 0px; left: 0px;
+               background-color: lightgrey;" src = "" id="02" alt="pt3" draggable="true" ondragstart="drag(event)">
+    </div>
+        
+    <div id="img3">   
+	<img style = "position: absolute; top: 0px; left: 0px;
+               background-color: lightgrey;" src = "" id="03" alt="pt4" draggable="true" ondragstart="drag(event)">
+    </div>
+        
+    <div id="img4">   
+	<img style = "position: absolute; top: 0px; left: 0px;
+               background-color: lightgrey;" src = "" id="10" alt="pt5" draggable="true" ondragstart="drag(event)">
+    </div>
+        
+    <div id="img5">   
+	<img style = "position: absolute; top: 0px; left: 0px;
+               background-color: lightgrey;" src = "" id="11" alt="pt6" draggable="true" ondragstart="drag(event)">
+    </div>
+        
+    <div id="img6">   
+	<img style = "position: absolute; top: 0px; left: 0px;
+               background-color: lightgrey;" src = "" id="12" alt="pt7" draggable="true" ondragstart="drag(event)">
+    </div>
+        
+    <div id="img7">  
+	<img style = "position: absolute; top: 0px; left: 0px;
+               background-color: lightgrey;" src = "" id="13" alt="pt8" draggable="true" ondragstart="drag(event)">
+    </div>
+        
+    <div id="img8">   
+	<img style = "position: absolute; top:00px; left:0px;
+               background-color: lightgrey;" src = "" id="20" alt="pt9" draggable="true" ondragstart="drag(event)">
+    </div>
+        
+    <div id="img9">   
+	<img style = "position: absolute; top: 0px; left: 0px;
+               background-color: lightgrey;" src = "" id="21" alt="pt10" draggable="true" ondragstart="drag(event)">
+    </div>
+        
+    <div id="img10">   
+	<img style = "position: absolute; top: 0px; left: 0px;
+               background-color: lightgrey;" src = "" id="22" alt="pt11" draggable="true" ondragstart="drag(event)">
+    </div>
+        
+    <div id="img11">  
+	<img style = "position: absolute; top: 0px; left: 0px;
+               background-color: lightgrey;" src = "" id="23" alt="pt12" draggable="true" ondragstart="drag(event)">
+    </div>
+    </div>
+        
+<script src="jigsaw.js" type="text/javascript"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Homework 8</title>
+</head>
+<body>
+    <header> <u>Galaxies</u></header>
+     <img src="images/GalaxyCluster.jpg" width="640" height="480" id="myPicture" alt="image">
+    <h3 id="label">Galaxy Cluster</h3>
+     
+
+<script >
+window.onload = choosePic;
+var myPix = new Array("images/GalaxyCluster.jpg","images/InteractingGalaxies.jpg","images/M51.jpg","images/M104.jpg","images/NGC1300.jpg","images/NGC6217");
+var myNames = new Array("Galaxy Cluster","Interacting Galaxies", "M51","M104","NGC1300","NGC6217");
+    
+
+function choosePic() {
+    var randomNum = Math.floor(Math.random() * myPix.length);
+    document.getElementById("myPicture").src = myPix[randomNum];
+    document.getElementById("label").innerHTML = myNames[randomNum];
+
+}
+
+</script>
+<style>
+    body{
+        background-color: darkgray;
+    }
+    #myPicture{
+        border: 3px solid white
+    }
+    #label{
+        border: 1px solid black;
+    }
+    
+</style>
+</body>
+
+</html>

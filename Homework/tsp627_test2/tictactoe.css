@@ -1,0 +1,50 @@
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+  color: #fff;
+  text-shadow: -1px -1px #333;
+  background-color: dimgray;
+}
+body h1 {
+  font-weight: normal;
+}
+body .turn {
+  margin-bottom: 10px;
+}
+body table {
+  border-collapse: collapse;
+  width: 150px;
+  margin: 0 auto;
+}
+body table td {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #555;
+  cursor: pointer;
+}
+body table input:before {
+  font-size: 1.5em;
+  line-height: 1;
+}
+body table td.cross:before {
+  content: "x";
+  color: lightblue;
+}
+body table td.circle:before {
+  content: "o";
+  color: pink;
+}
+body .reset {
+  background: #555;
+  border: 1px solid #333;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Roboto", Arial, sans-serif;
+  text-transform: uppercase;
+}
+body .reset:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,114 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+header{
+    font-family: Courier New,monospace;
+    background-color: ;
+    text-align: center;
+    padding: 0px;
+    border: solid 1px;
+    border-top-color: black;
+    background: linear-gradient(to right,white,white,white,white,white,green,green,green,green,green,white,white,white,white,white);
+    color: white;
+    
+}
+#profile-img{
+    width: 140px;
+    height: 150px;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    padding: 55p;
+    
+}
+#first-name{
+    width: 150px;
+    font-family: Arial, Helvetica,sans-serif;
+    font-weight: 100;
+    border-top: solid 10px;
+    border-bottom: solid 10px;
+    border-top-color:rgba(25,255,60,.5);
+    border-bottom-color: rgba(25,255,60,.6)
+    
+}
+.hwk2{
+    padding: 50px;
+    font-family: Arial, Helvetica,sans-serif;
+    background: linear-gradient(to right,white,white,white,green,green,green,white,white,white);
+}
+.top-info{
+    padding-left: 45%;
+    padding-right: 10%;
+    border:solid 1px green;
+  
+}
+.container{
+    background-color: white;
+    padding: 10px;
+    border: solid 1px green;
+    background-size: contain;
+}
+
+/*
+//Home Work 3 Styling
+*/
+
+
+.hwk3{
+    background-color: rgba(204, 85, 0,);
+    padding: 10px;
+    font-family: Arial, Helvetica,sans-serif;
+    border: solid 10px;
+}
+.form-body{
+    padding: 20px;
+    background-size: contain;
+    background-color: rgba(204, 85, 0,1);
+    border: solid 1px; 
+}
+#opt-table td{
+    padding: 15px;    
+}
+textarea {
+    width: 50%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+select {
+    width: 25%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+.top-form input {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: solid 1px;
+    box-sizing: border-box;
+    height:10px;
+}
+.button {
+    background-color: rgba(204, 85, 0,1); 
+    border: none;
+    color: white;
+    padding: 13px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: ridge 4px;
+}
+
+
+#md-img {
+    flex: wrap;
+}

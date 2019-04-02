@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=UTF-8 name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Homework 9</title>
+     <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Slideshow container 
+<div class="slideshow-container">
+
+    <img id="slideshow" src="images/agra_fort.jpg" style="width:100%">
+    
+    <div class="text">
+        <div class="numbertext"><span id="numText">1</span>/10</div><span id="caption">
+        Agra Fort</span>
+    </div>
+
+  <a class="prev" onclick="slide()">&#10094;</a>
+  <a class="next" onclick="slide()">&#10095;</a>
+</div>
+<br>
+
+<div id="button">
+    <button id="startcycle" onclick="imageSlide()"> Pause</button>
+</div>
+-->
+<div class="slideshow-container">
+
+<ul id="slides">
+	<li class="slide showing"><img  src="images/agra_fort.jpg" style="width:100%">
+    <div class="text">
+    <div class="numbertext">1/10</div>Agra Fort
+        </div>
+    </li>
+    <li class="slide"><img  src="images/ajanta_ellora.jpeg" style="width:100%">
+    <div class="text">
+    <div class="numbertext">2/10</div>Ajanta Ellora
+        </div>
+    </li>
+	<li class="slide"><img  src="images/akshardham_temple.jpg" style="width:100%">
+    <div class="text">
+    <div class="numbertext">3/10</div>Akshardham Temple
+        </div>
+    </li>
+	<li class="slide"><img id="char" src="images/char_minar.jpg" style="width:100%">
+    <div class="text">
+    <div class="numbertext">4/10</div>Char Minar 
+        </div>
+    </li>
+	<li class="slide"><img  src="images/hawa_mahal.jpeg" style="width:100%">
+    <div class="text">
+    <div class="numbertext">5/10</div>Hawa Mahal
+        </div>
+    </li>
+    <li class="slide"><img  src="images/mumbai.jpeg" style="width:100%">
+    <div class="text">
+    <div class="numbertext">6/10</div>Mumbai 
+        </div>
+    </li>
+	<li class="slide"><img  src="images/mysore_palace.jpeg" style="width:100%">
+    <div class="text">
+    <div class="numbertext">7/10</div>Mysore Palace
+        </div>
+    </li>
+	<li class="slide"><img  src="images/sun_temple.jpg" style="width:100%">
+    <div class="text">
+    <div class="numbertext">8/10</div>Sun Temple
+        </div>
+    </li>
+	<li class="slide"><img  src="images/taj_mahal.jpeg" style="width:100%">
+    <div class="text">
+    <div class="numbertext">9/10</div>Taj Mahal
+        </div>
+    </li>
+	<li class="slide"><img src="images/victoria_memorial.jpg" style="width:100%">
+    <div class="text">
+    <div class="numbertext">10/10</div>Victoria Memorial
+        </div>
+    </li>
+    
+</ul>
+</div>
+<button class="controls" id="pause">Pause</button>
+    
+    
+    
+    
+    
+<script>
+/*
+var images = new Array("images/agra_fort.jpg","images/ajanta_ellora.jpeg","iamges/akshardham_temple.jpg","images/char_minar.jpg","images/hawa_mahal.jpeg","images.mumbai.jpeg","images/mysore_palace.jpeg","images/sun_temple.jpg","taj_mahal.jpeg","images/victoria_memorial.jpg");
+*/
+var myNames = new Array("Agra Fort","Ajanta Ellora", "Akshardham Temple","Char Minar","Hawa Mahal","Mumbai","Mysore Palace","Sun Temple","Taj Mahal","Vitcoria Memorial");
+var slides = document.querySelectorAll('#slides .slide');
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide,3000);
+
+function nextSlide(){
+	slides[currentSlide].className = 'slide';
+	currentSlide = (currentSlide+1)%slides.length;
+	slides[currentSlide].className = 'slide showing';
+    document.getElementById("slideshow").src = images[i];
+    document.getElementById("numText").innerHTML =[i];
+    document.getElementById("caption").innerHTML=myNames[i];
+}
+
+var playing = true;
+var pauseButton = document.getElementById('pause');
+
+function pauseSlideshow(){
+	pauseButton.innerHTML = 'Play';
+	playing = false;
+	clearInterval(slideInterval);
+}
+
+function playSlideshow(){
+	pauseButton.innerHTML = 'Pause';
+	playing = true;
+	slideInterval = setInterval(nextSlide,3000);
+}
+
+pauseButton.onclick = function(){
+	if(playing){
+        pauseSlideshow(); 
+    }
+	else{ 
+        playSlideshow(); 
+    }
+};
+/*
+    
+window.onload = imageSlide;
+function imageSlide(){
+    
+    var j;
+    for (j = 0; j < images.length; j++) { 
+    var i = 1;
+
+    var slideInterval = setInterval(slide,3000);
+        function slide() {
+            document.getElementById("slideshow").src = images[i];
+            document.getElementById("numText").innerHTML =[i];
+            document.getElementById("caption").innerHTML=myNames[i];
+        }
+    i++;
+
+    }
+}
+*/
+    
+</script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8 name="viewport" content="width=device-width, initial-scale=1.0">
+<title> HomeWork 6</title>    
+
+</head>
+<body>
+<div align="center">
+<h3> Simple Adder </h3>
+<form id="mortgageForm" action="" method="post" name="mortgageCalc">
+    <table border="0">
+        <tr>
+            <td> Principal amount</td>
+            <td>
+                <input type="text" name="principal" size="20"  required/>
+            </td>
+        </tr>
+        <tr>
+            <td> Yearly Percentage Interest Rate </td>
+            <td>
+                <input type="text" name="apr" size="20" required/>
+            </td>
+        </tr>
+        <tr>
+            <td>Loan Term in Months</td>
+            <td>
+                <input type="text" name="months" size="20" required/>
+            </td>
+        </tr>     
+        <tr>
+            
+        <td>
+        <input type="button" name="calcBtn" value="Calculate" onclick="calculate();" required/>
+        </td>
+            
+        <td><input type="reset" value="Clear"/></td>
+        </tr>
+        <tr>
+            <td> Monthly Payments </td>
+            <td><input type="text" name="monthly" size="20" value="$0.00"></td>
+        </tr>
+        <tr>
+            <td> Sum of all Payments </td>
+            <td><input type="text" name="sum" size="20" value="$0.00"/></td>
+        </tr>
+        <tr>
+            <td> Total Interest Paid </td>
+            <td><input type="text" name="total" size="20" value="$0.00"/></td>
+        </tr>
+    </table>
+</form>
+</div>
+
+<script type = "text/javascript">
+
+   document.getElementById("mortgageForm").calcBtn.onclick = calculate;
+   function calculate ()
+   {
+     var sum ="";
+     var principal= document.mortgageCalc.principal.value; //principal loan amount
+     var apr= document.mortgageCalc.apr.value; //monthly interest rate, yearly rate/12
+     var months = document.mortgageCalc.months.value;
+     var positive = /^[+]?([.]\d+|\d+[.]?\d*)$/;
+     console.log(principal,apr,months);
+
+     if (positive.test(principal) && positive.test(apr) && positive.test(months)){
+         apr= apr/12;
+         var monthlyPay = principal*apr /(1-(1/((1+apr),months) - 1));
+         var sum = monthlyPay*months;
+         var total = sum-principal;
+         document.mortgageCalc.monthly.value= "$"+monthlyPay.toFixed(2);
+         document.mortgageCalc.sum.value= "$"+sum.toFixed(2);
+         document.mortgageCalc.total.value ="$"+total.toFixed(2);
+     }
+    else{
+        alert("Any non-numeric values or negative numbers are not allowed")
+    }
+     console.log(sum)
+   }
+/*    
+
+R = P * r / (1 - (1 / (1 + r)n)) 
+where 
+R = monthly payment 
+P = principal loan amount 
+r = monthly interest rate (yearly rate divided by 12) 
+n = number of months 
+*/
+    
+</script>				    
+</body>
+
+
+</html>

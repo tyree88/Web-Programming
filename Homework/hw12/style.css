@@ -1,0 +1,53 @@
+body {
+    color: black;
+    background: grey;
+}
+#picbox {
+	margin: 0px auto;
+	width: 640px;
+}
+#boxcard {
+	z-index: 1;
+	margin: 10px 0 0;
+    visibility: visible;
+}
+p{
+    visibility: hidden;
+}
+#boxcard div{
+	float: left;
+	width: 83px;
+    align-content: center;
+    flex: initial;
+	height: 55px;
+	margin: 10px;
+	padding: 1px;
+	border: 1px solid black;
+	cursor: pointer;
+	border-radius: 8px;
+    background: white;
+	z-index: 2;
+    font-size: 20px;
+    text-align: center;
+}
+#boxcard div img {
+	display: none;
+	border-radius: 10px;
+	z-index: 3;
+}
+#boxbuttons {
+	text-align: center;
+	margin: 20px;
+	display: block;
+}
+#boxbuttons .button {
+	text-transform: uppercase;
+	background: white;
+	padding: 5px 10px;
+	margin: 5px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+#boxbuttons .button:hover {
+	background: black;
+}

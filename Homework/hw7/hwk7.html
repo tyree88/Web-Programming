@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=UTF-8 name="viewport" content="width=device-width, initial-scale=1.0">
+<title> HomeWork 7</title>    
+
+</head>
+<body>
+<div class="container">
+  <form action="" method="" target="" onsubmit="return register(this);">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="psw">Password</label>
+    <input type="password" id="psw" name="psw" required>
+      
+    <label for="pswRepeat">Repeat Password</label>
+    <input type="password" id="psw2" name="psw2" required>
+
+    <input type="submit" value="Register">
+    <input type="reset" value="Clear">
+
+  </form>
+</div>
+<script>
+var submit = document.getElementById('submit')
+var myUser = document.getElementById("username");
+var myPsw = document.getElementById("psw");
+var myPsw2 = document.getElementById("psw2"); //has to be same as psw
+//var re = new RegExp('(^(^0-9))(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,10}');
+//var user = new RegExp('(^(^0-9))([a-zA-Z]).{6,10}');
+function checkPassword(str)
+  {
+    // at least one number, one lowercase and one uppercase letter
+    // at least six characters
+    var re = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,10}/;
+    return re.test(str);
+  }
+function register(form){
+    re = /(^[^0-9])([a-zA-Z]){6,10}/;
+    if(!re.test(form.username.value)) {
+      alert("username invalid");
+      form.username.focus();
+      return false;
+    }
+    if(form.psw.value != "" && form.psw.value == form.psw2.value) {
+      if(!checkPassword(form.psw.value)) {
+        alert("password invalid");
+        form.psw.focus();
+        return false;
+        }
+    }
+     else {
+      alert("repeat password invalid");
+      form.psw.focus();
+      return false;
+    }
+    alert('valid');
+    return true
+}
+</script>
+<style>
+/* Style all input fields */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Style the container for inputs */
+.container {
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+  
+    
+    
+</style>
+</body>
+</html>
